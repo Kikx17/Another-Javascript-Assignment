@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h3>Assignment</h3>
+
+<input type="text" id="Text" value="Type something..."><!-- Creating a text box-->
+
+<p>Click "Button. It will copy the text in the box to the spot between "button" and "Go to google".
+Since I explained it like crap, just type something and press "button".</p>
+
+<button onclick="CopyText()">Button</button> <!-- Here I create a button that does a function-->
+
+<p id="copyHere"></p> <!-- This is the place where the text is copied.-->
+
+<script>
+function CopyText() {<!-- Here is the function that copies the text in the box.-->
+	var x = document.getElementById("Text").value;
+	document.getElementById("copyHere").innerHTML = x;
+}
+</script>
+
+<script type="text/javascript">
+function Popup(){				<!--Creating a function for pop-up.-->
+	alert ("This is a pop-up.");
+}
+</script>
+
+
+<form action="http://www.google.com">
+    <button type="submit">Go to google</button>
+</form>
+
+<form>
+<input type="button" value="Touch me, uhh" onClick="Popup()"/>
+</form>
+
+</body>
+</html>
